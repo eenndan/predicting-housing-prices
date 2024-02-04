@@ -1,12 +1,6 @@
 Data Science Capstone Project
 ================
 Daniil Ennus
-2024-02-04
-
-<style>
-div.navy1 { background-color:#686868; border-radius: 5px; padding: 20px; border-style: groove; color: #ffffff;}
-
-</style>
 
 # Introduction and learning objectives
 
