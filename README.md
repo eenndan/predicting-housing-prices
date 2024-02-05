@@ -15,7 +15,7 @@ investment decisions in London house market using machine
 learning algorithms given variety of information about each property.
 
 
-**Tableau dashboards available** [here](
+**Tableau dashboard available** [here](
 https://public.tableau.com/views/LondonPrices_17010223638140/LondonPrices?:language=en-GB&:display_count=n&:origin=viz_share_link), which provides background information about London housing market. This was a project for the Data Visualisation course.
 
 <b>Table of Contents</b>
