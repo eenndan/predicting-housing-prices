@@ -1,33 +1,43 @@
 Data Science Capstone Project
 ================
 Daniil Ennus
+London Business School 
+Data Science Course
 
 # Introduction and learning objectives
 
 <div class="navy1">
 
 The purpose of this exercise is to build an estimation engine to guide
-investment decisions in London house market. I will first build machine
-learning algorithms (and tune them) to estimate the house prices given
-variety of information about each property.
+investment decisions in London house market, using machine
+learning algorithms given variety of information about each property.
 
-<b>Learning objectives</b>
+<b>Table of Contents</b>
 
 <ol type="i">
 <li>
-Using different data mining algorithms for prediction.
+Loading, cleaning, inspecting, and visualisign data. 
 </li>
 <li>
-Dealing with large data sets
+Linear Model
 </li>
 <li>
-Tuning data mining algorithms
+Decision Tree
 </li>
 <li>
-Interpreting data mining algorithms and deducing importance of variables
+Ada Boost
 </li>
 <li>
-Using results of data mining algorithms to make business decisions
+KNN
+</li>
+<li>
+Random Forest
+</li>
+<li>
+Stacking
+</li>
+<li>
+Choosing Investments
 </li>
 </ol>
 
@@ -36,7 +46,7 @@ Using results of data mining algorithms to make business decisions
 # Load data
 
 There are two sets of data, i) training data that has the actual prices
-ii) out of sample data that has the asking prices. Load both data sets.
+ii) out of sample data that has the asking prices.
 
 ``` r
 #read in the data
@@ -405,7 +415,7 @@ It is seen from the graphs that floor area and number of rooms are very
 correlated with the price of the apartment. Distance to station also
 plays an important role as well as London TFL zones.
 
-Estimate a correlation table between prices and other continuous
+Correlation table between prices and other continuous
 variables.
 
 ``` r
@@ -834,7 +844,7 @@ rpart.plot(model2_tree$finalModel)
 ![](Project_files/figure-gfm/tree%20model-1.png)<!-- -->
 
 ``` r
-#you can also visualize the variable importance
+#visualize the variable importance
 importance <- varImp(model2_tree, scale=TRUE)
 plot(importance)
 ```
@@ -875,7 +885,7 @@ model3_tree <- train(
     ## Fitting cp = 0.0137 on full training set
 
 ``` r
-#You can view how the tree performs
+# Check how the tree performs
 model3_tree$results
 ```
 
@@ -892,14 +902,14 @@ model3_tree$results
     ## 10 0.32523559 490700.6 0.2697796 269012.6 53355.20 0.006387443 28295.653
 
 ``` r
-#You can view the final tree
+# View the final tree
 rpart.plot(model3_tree$finalModel)
 ```
 
 ![](Project_files/figure-gfm/tree%20model-3.png)<!-- -->
 
 ``` r
-#you can also visualize the variable importance
+# Visualize the variable importance
 importance <- varImp(model3_tree, scale=TRUE)
 plot(importance, 25)
 ```
@@ -1553,7 +1563,7 @@ ggplot(aes(x = log(actual), y = log(prediction)), data = df) +
 
 ## With KNN
 
-Use stacking to ensemble your algorithms.
+Stacking to ensemble algorithms.
 
 ``` r
 library(caretEnsemble)
@@ -1935,7 +1945,6 @@ print(model_list$ranger$bestTune)
     ## 1   12  variance             5
 
 ``` r
-# Fortunately caret package has various functions to display relative performance of multiple methods
 
 # To use them we need to put all results together in a list first
 resamples <- resamples(model_list)
@@ -2154,7 +2163,7 @@ oos <- oos  %>%
 #output your choices. Change the name of the file to your "lastname_firstname.csv"
 write.csv(oos,"Daniil_Ennus.csv", row.names = FALSE)
 
-# check that I picked 200 investments
+# check that I picked 200 investments as said in the assignment
 sum(oos$buy) # == 200
 ```
 
