@@ -6,7 +6,7 @@ London Business School
 
 Data Science Course
 
-# Introduction and learning objectives
+# Introduction and outline
 
 <div class="navy1">
 
