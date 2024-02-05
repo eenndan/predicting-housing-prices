@@ -1,7 +1,9 @@
 Data Science Capstone Project
 ================
 Daniil Ennus
+
 London Business School 
+
 Data Science Course
 
 # Introduction and learning objectives
