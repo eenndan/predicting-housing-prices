@@ -11,7 +11,7 @@ Data Science Course
 <div class="navy1">
 
 The purpose of this exercise is to build an estimation engine to guide
-investment decisions in London house market, using machine
+investment decisions in London house market using machine
 learning algorithms given variety of information about each property.
 
 <b>Table of Contents</b>
