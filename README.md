@@ -14,6 +14,11 @@ The purpose of this exercise is to build an estimation engine to guide
 investment decisions in London house market using machine
 learning algorithms given variety of information about each property.
 
+
+**Tabluae dashboards available** [here](
+https://public.tableau.com/views/LondonPrices_17010223638140/LondonPrices?:lan guage=en-GB&:display_count=n&:origin=viz_share_link
+), which provide background information. This was a project for the Data Visualisation course.
+
 <b>Table of Contents</b>
 
 <ol type="i">
